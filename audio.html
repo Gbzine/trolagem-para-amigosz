@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Botão PLAY</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        button {
+            font-size: 24px;
+            padding: 20px 40px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="playButton">PLAY</button>
+
+<audio id="audio" src="troll.mp3"></audio>
+
+<script>
+document.getElementById("playButton").addEventListener("click", function() {
+    var audio = document.getElementById("audio");
+    audio.volume = 1.0; // Define o volume para o máximo
+    audio.play();
+});
+</script>
+
+</body>
+</html>
